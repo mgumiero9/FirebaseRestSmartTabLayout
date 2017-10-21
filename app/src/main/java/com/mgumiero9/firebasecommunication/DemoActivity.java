@@ -29,7 +29,6 @@ public class DemoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demo);
 
-//    Demo demo = getDemo();
         Demo demo = Demo.values()[1];
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
