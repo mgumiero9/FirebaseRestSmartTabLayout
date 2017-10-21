@@ -63,7 +63,6 @@ public enum Demo {
                     R.string.demo_tab_no_title,
                     R.string.demo_tab_no_title,
                     R.string.demo_tab_no_title,
-                    R.string.demo_tab_no_title
             };
         }
 
@@ -88,9 +87,6 @@ public enum Demo {
                             break;
                         case 2:
                             icon.setImageDrawable(res.getDrawable(R.drawable.ic_person_white_24dp));
-                            break;
-                        case 3:
-                            icon.setImageDrawable(res.getDrawable(R.drawable.ic_flash_on_white_24dp));
                             break;
                         default:
                             throw new IllegalStateException("Invalid position: " + position);
