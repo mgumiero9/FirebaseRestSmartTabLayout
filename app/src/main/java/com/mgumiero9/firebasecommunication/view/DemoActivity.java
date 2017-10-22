@@ -1,4 +1,4 @@
-package com.mgumiero9.firebasecommunication;
+package com.mgumiero9.firebasecommunication.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.mgumiero9.firebasecommunication.R;
+import com.mgumiero9.firebasecommunication.util.Demo;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;

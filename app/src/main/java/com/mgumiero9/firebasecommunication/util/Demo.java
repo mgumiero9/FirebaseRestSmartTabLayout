@@ -1,4 +1,4 @@
-package com.mgumiero9.firebasecommunication;
+package com.mgumiero9.firebasecommunication.util;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.mgumiero9.firebasecommunication.view.DemoActivity;
+import com.mgumiero9.firebasecommunication.R;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 
 public enum Demo {

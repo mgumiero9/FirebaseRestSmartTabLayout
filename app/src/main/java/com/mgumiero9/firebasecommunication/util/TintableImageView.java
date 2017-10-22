@@ -1,10 +1,12 @@
-package com.mgumiero9.firebasecommunication;
+package com.mgumiero9.firebasecommunication.util;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.ImageView;
+
+import com.mgumiero9.firebasecommunication.R;
 
 public class TintableImageView extends ImageView {
 

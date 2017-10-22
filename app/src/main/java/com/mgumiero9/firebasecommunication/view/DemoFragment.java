@@ -1,4 +1,4 @@
-package com.mgumiero9.firebasecommunication;
+package com.mgumiero9.firebasecommunication.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.mgumiero9.firebasecommunication.R;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 
 public class DemoFragment extends Fragment implements View.OnClickListener {
