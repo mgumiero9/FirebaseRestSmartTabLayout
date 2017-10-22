@@ -24,6 +24,8 @@ public class DemoFragment extends Fragment {
         int position = FragmentPagerItem.getPosition(getArguments());
         TextView title = view.findViewById(R.id.item_title);
         title.setText(String.valueOf(position));
+
+
     }
 
 }

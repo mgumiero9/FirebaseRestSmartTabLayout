@@ -7,9 +7,6 @@
     <color name="primary">#3C515C</color>
     <color name="primary_dark">#142E3C</color>
     <color name="accent">#40C4FF</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="black">#FF000000</color>
-    <color name="black_20">#33000000</color>
     <color name="white_20">#33FFFFFF</color>
     <color name="transparent">#00000000</color>
 
@@ -27,6 +24,36 @@
     <color name="teal_500">#009688</color>
     <color name="green_500">#4CAF50</color>
     <color name="light_green_500">#8BC34A</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_30">#4dffffff</color>
+    <color name="white_50">#80ffffff</color>
+    <color name="empty_state">#f0f1f5</color>
+    <color name="black">#000000</color>
+    <color name="black_20">#33000000</color>
+    <color name="black_50">#80000000</color>
+    <!-- Imported colors -->
+    <color name="timberwolf">#d8d8d8</color>
+    <color name="pastelgray">#cdcccd</color>
+    <color name="byzantium">#672280</color>
+    <color name="darkorchid">#9534b5</color>
+    <color name="persianred">#d72f2f</color>
+    <color name="falured">#901b18</color>
+    <color name="mediumjunglegreen">#2d2d2d</color>
+    <color name="darkjunglegreen">#282828</color>
+    <color name="orange">#ffa600</color>
+    <color name="platinum">#e3e3e3</color>
+    <color name="limegreen">#42b747</color>
+    <color name="vermilion">#ea4335</color>
+    <color name="snow">#fafafa</color>
+    <color name="ashgrey">#b2b2b2</color>
+    <color name="darkjunglegreen_1">#292929</color>
+    <color name="fireenginered">#d21f1f</color>
+    <color name="oldlavender">#757575</color>
+    <color name="taupegray">#939393</color>
+    <color name="darkjunglegreen_2">#1d1d1d</color>
+    <color name="otterbrown">#714327</color>
+    <color name="copper">#a3663f</color>
 
     <integer-array name="custom_tab_colors">
         <item>@color/light_blue_500</item>

@@ -34,7 +34,7 @@ public class DemoActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(demo.titleResId);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         ViewGroup tab = (ViewGroup) findViewById(R.id.tab);
         tab.addView(LayoutInflater.from(this).inflate(demo.layoutResId, tab, false));

@@ -86,7 +86,7 @@ public enum Demo {
                             icon.setImageDrawable(res.getDrawable(R.drawable.ic_whatshot_white_24dp));
                             break;
                         case 2:
-                            icon.setImageDrawable(res.getDrawable(R.drawable.ic_person_white_24dp));
+                            icon.setImageDrawable(res.getDrawable(R.drawable.ic_swap_calls_white_24dp));
                             break;
                         default:
                             throw new IllegalStateException("Invalid position: " + position);
