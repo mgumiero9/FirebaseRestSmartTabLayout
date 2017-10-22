@@ -36,5 +36,8 @@
     <string name="page">Page:</string>
     <string name="type_your_text">Type your text here</string>
     <string name="next">Next</string>
+    <string name="type_your_name">Type your name</string>
+    <string name="age">Age</string>
+    <string name="add">Add</string>
 
 </resources>
