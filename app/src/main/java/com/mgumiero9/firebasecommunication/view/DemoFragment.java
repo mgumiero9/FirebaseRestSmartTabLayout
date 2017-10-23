@@ -37,10 +37,10 @@ public class DemoFragment extends Fragment implements View.OnClickListener {
     }
 
     private void setupBindings(View view) {
-        title = view.findViewById(R.id.item_title);
-        layoutInit = view.findViewById(R.id.demo_ll_init_page);
-        layoutData = view.findViewById(R.id.demo_ll_data);
-        addButton = view.findViewById(R.id.demo_b_add);
+        title = (TextView) view.findViewById(R.id.item_title);
+        layoutInit = (LinearLayout) view.findViewById(R.id.demo_ll_init_page);
+        layoutData = (LinearLayout) view.findViewById(R.id.demo_ll_data);
+        addButton = (Button) view.findViewById(R.id.demo_b_add);
     }
 
     private void setupViewPagerLayoutBehavior(int position, LinearLayout llData, LinearLayout llInit) {
