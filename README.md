@@ -1,6 +1,8 @@
 # FirebaseRestSmartTabLayout
 
-Android Application 
+Android Application
+
+Please check Data written on: https://us-central1-mybackend-10a0f.cloudfunctions.net/readData
 
 minSdkVersion 21
 
