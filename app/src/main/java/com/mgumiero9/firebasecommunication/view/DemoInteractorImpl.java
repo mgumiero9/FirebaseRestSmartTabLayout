@@ -28,7 +28,7 @@ class DemoInteractorImpl implements DemoInteractor {
     }
 
     @Override
-    public Observable<Customer> resetCustomerDB(String areYouSure) {
+    public Completable resetCustomerDB(String areYouSure) {
         return demoRepository.resetCustomerDB(areYouSure);
     }
 }

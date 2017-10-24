@@ -16,5 +16,5 @@ public interface Api {
     Completable storeData(@Query("name") String name, @Query("age") int age);
 
     @GET("resetCustomerDB/")
-    Observable<Customer> resetCustomerDB(@Query("areYouSure") String areYouSure);
+    Completable resetCustomerDB(@Query("areYouSure") String areYouSure);
 }

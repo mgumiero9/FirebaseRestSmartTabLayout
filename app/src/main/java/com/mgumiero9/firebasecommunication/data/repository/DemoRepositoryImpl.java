@@ -28,7 +28,7 @@ public class DemoRepositoryImpl implements DemoRepository {
     }
 
     @Override
-    public Observable<Customer> resetCustomerDB(String areYouSure) {
+    public Completable resetCustomerDB(String areYouSure) {
         return api.resetCustomerDB(areYouSure);
     }
 }

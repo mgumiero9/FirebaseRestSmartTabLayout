@@ -9,7 +9,9 @@ interface DemoView {
 
     void onItemsReceived(String name, int age);
 
-    void onCustomerStored();
+    void onCustomerStored(String name, int age);
+
+    void onResetCustomerDB();
 
     void stopRefreshing();
 

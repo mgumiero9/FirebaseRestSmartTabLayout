@@ -40,7 +40,7 @@ public class DemoFragment extends Fragment implements DemoView, HasSupportFragme
     LinearLayout layoutInit, layoutData;
     EditText name, age;
     TextView title;
-    Button addButton;
+    Button addButton, resetButton;
 
     @Override
     public void onAttach(Context context) {
@@ -64,16 +64,19 @@ public class DemoFragment extends Fragment implements DemoView, HasSupportFragme
         setupBindings(view);
         title.setText(String.valueOf(position));
         setupViewPagerLayoutBehavior(position, layoutData, layoutInit);
+
         addButton.setOnClickListener(this);
+        resetButton.setOnClickListener(this);
     }
 
     private void setupBindings(View view) {
-        title = (TextView) view.findViewById(R.id.item_title);
-        layoutInit = (LinearLayout) view.findViewById(R.id.demo_ll_init_page);
-        layoutData = (LinearLayout) view.findViewById(R.id.demo_ll_data);
-        addButton = (Button) view.findViewById(R.id.demo_b_add);
-        name = (EditText) view.findViewById(R.id.demo_et_name);
-        age = (EditText) view.findViewById(R.id.demo_et_age);
+        title = view.findViewById(R.id.item_title);
+        layoutInit = view.findViewById(R.id.demo_ll_init_page);
+        layoutData = view.findViewById(R.id.demo_ll_data);
+        addButton = view.findViewById(R.id.demo_b_add);
+        resetButton = view.findViewById(R.id.demo_b_reset);
+        name = view.findViewById(R.id.demo_et_name);
+        age = view.findViewById(R.id.demo_et_age);
     }
 
     /**
@@ -100,11 +103,24 @@ public class DemoFragment extends Fragment implements DemoView, HasSupportFragme
      */
     @Override
     public void onClick(View v) {
-        storeCustomer();
+        switch (v.getId()) {
+            case R.id.demo_b_add:
+                storeCustomer(name, age);
+                break;
+            case R.id.demo_b_reset:
+                resetCustomerDB();
+                break;
+        }
     }
 
-    private void storeCustomer() {
-        demoPresenter.storeData(name.getText().toString(), Integer.parseInt(age.getText().toString()));
+    private void storeCustomer(EditText name, EditText age) {
+        String mName = name.getText().toString();
+        int mAge = "".equals(age.getText().toString()) ? 0 : Integer.parseInt(age.getText().toString());
+        demoPresenter.storeData(mName, mAge);
+    }
+
+    private void resetCustomerDB() {
+        demoPresenter.resetCustomerDB();
     }
 
     @Override
@@ -119,12 +135,17 @@ public class DemoFragment extends Fragment implements DemoView, HasSupportFragme
 
     @Override
     public void onItemsReceived(String name, int age) {
-        Toast.makeText(context, "name, age: " + name + age, Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "name, age: " + name + " " + age, Toast.LENGTH_LONG).show();
     }
 
     @Override
-    public void onCustomerStored() {
+    public void onCustomerStored(String name, int age) {
+        Toast.makeText(context, "name, age: " + name + " " + age, Toast.LENGTH_LONG).show();
+    }
 
+    @Override
+    public void onResetCustomerDB() {
+        Toast.makeText(context, "CustomerDB reset is Successful.", Toast.LENGTH_SHORT).show();
     }
 
     @Override

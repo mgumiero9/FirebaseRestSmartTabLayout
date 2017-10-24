@@ -10,6 +10,6 @@ public interface DemoRepository {
 
     Completable storeData(String name, int age);
 
-    Observable<Customer> resetCustomerDB(String areYouSure);
+    Completable resetCustomerDB(String areYouSure);
 
 }

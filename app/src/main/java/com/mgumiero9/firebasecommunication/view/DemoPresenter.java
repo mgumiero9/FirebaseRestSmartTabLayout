@@ -64,9 +64,13 @@ public class DemoPresenter {
                 });
     }
 
-    void storeData(String name, int age) {
+    void storeData(final String name, final int age) {
         if (name.isEmpty()) {
             demoView.showToast("Type your name to proceed.");
+            return;
+        }
+        if (age == 0) {
+            demoView.showToast("Type your age to proceed.");
             return;
         }
 
@@ -76,7 +80,7 @@ public class DemoPresenter {
                 .subscribe(new Action() {
                     @Override
                     public void run() throws Exception {
-                        demoView.onCustomerStored();
+                        demoView.onCustomerStored(name, age);
                     }
                 }, new Consumer<Throwable>() {
                     @Override
@@ -86,38 +90,20 @@ public class DemoPresenter {
                 });
     }
 
-    void resetCustomerDB(String areYouSure) {
+    void resetCustomerDB() {
 
-        demoInteractor.resetCustomerDB(areYouSure)
+        demoInteractor.resetCustomerDB("true")
+                .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnSubscribe(new Consumer<Disposable>() {
-                    @Override
-                    public void accept(Disposable disposable) throws Exception {
-                        demoView.startLoading();
-                    }
-                })
-                .doOnTerminate(new Action() {
+                .subscribe(new Action() {
                     @Override
                     public void run() throws Exception {
-                        demoView.stopRefreshing();
-                    }
-                })
-                .subscribe(new Consumer<Customer>() {
-                    @Override
-                    public void accept(Customer customer) throws Exception {
-                        demoView.stopLoading();
+                        demoView.onResetCustomerDB();
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
-                        demoView.showMessage("Erro: " + throwable.getLocalizedMessage(), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                demoView.stopLoading();
-                                dialog.dismiss();
-                            }
-                        });
-                        throwable.printStackTrace();
+                        demoView.showToast("Erro: " + throwable.getLocalizedMessage());
                     }
                 });
     }
