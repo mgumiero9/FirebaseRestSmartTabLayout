@@ -1,12 +1,17 @@
 package com.mgumiero9.firebasecommunication.data.entity;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Customer Class
  */
 
 public class Customer {
 
+    @SerializedName("name")
     private String name;
+
+    @SerializedName("age")
     private int age;
 
     public String getName() {
