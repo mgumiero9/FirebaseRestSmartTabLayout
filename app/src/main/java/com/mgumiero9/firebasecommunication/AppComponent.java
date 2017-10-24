@@ -1,6 +1,8 @@
 package com.mgumiero9.firebasecommunication;
 
 import com.mgumiero9.firebasecommunication.data.DataModule;
+import com.mgumiero9.firebasecommunication.view.DemoActivityModule;
+import com.mgumiero9.firebasecommunication.view.DemoModule;
 
 import javax.inject.Singleton;
 
@@ -12,6 +14,8 @@ import dagger.android.support.AndroidSupportInjectionModule;
 @Component(modules = {
         AndroidSupportInjectionModule.class,
         AppModule.class,
+        DemoActivityModule.class,
+        DemoModule.class,
         DataModule.class
 })
 @Singleton

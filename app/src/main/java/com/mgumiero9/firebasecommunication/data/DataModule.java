@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mgumiero9.firebasecommunication.BuildConfig;
 import com.mgumiero9.firebasecommunication.data.remote.Api;
+import com.mgumiero9.firebasecommunication.data.repository.DemoRepository;
+import com.mgumiero9.firebasecommunication.data.repository.DemoRepositoryImpl;
 
 import java.util.concurrent.TimeUnit;
 
@@ -70,5 +72,11 @@ public class DataModule {
     @Provides
     HttpLoggingInterceptor provideHttpLoggingInterceptor() {
         return new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+    }
+
+    @Provides
+    @Singleton
+    DemoRepository provideDemoRepository(Api api) {
+        return new DemoRepositoryImpl(api);
     }
 }
